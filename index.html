@@ -1,24 +1,366 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ritviks-neon-verse</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+    <title>Bollam Ritvik - Creative Editor & Futurist</title>
+    <meta name="description" content="Creative Portfolio of Bollam Ritvik - Video Editor & Digital Storyteller" />
+    <meta name="author" content="Bollam Ritvik" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <meta property="og:title" content="ritviks-neon-verse" />
-    <meta property="og:description" content="Lovable Generated Project" />
+    <meta property="og:title" content="Bollam Ritvik - Creative Editor & Futurist" />
+    <meta property="og:description" content="Creative Portfolio of Bollam Ritvik - Video Editor & Digital Storyteller" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <link rel="stylesheet" href="styles.css">
   </head>
 
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+      <div class="loader">
+        <div class="loader-text">INITIALIZING...</div>
+        <div class="loader-bar">
+          <div class="loader-progress"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">BR</div>
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Home Section -->
+    <section id="home" class="section home-section">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            <span class="glitch" data-text="Hi, I'm Bollam Ritvik">Hi, I'm Bollam Ritvik</span>
+          </h1>
+          <div class="typewriter-container">
+            <h2 class="typewriter" id="typewriter-text"></h2>
+          </div>
+          <p class="hero-description">Creating visual stories that transcend reality</p>
+          <a href="#about" class="cta-button">
+            <span>Explore My Universe</span>
+            <div class="button-glow"></div>
+          </a>
+        </div>
+        <div class="scroll-indicator">
+          <div class="scroll-arrow"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <div class="about-image">
+            <div class="image-container">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" alt="Bollam Ritvik" class="profile-img">
+              <div class="image-glow"></div>
+            </div>
+          </div>
+          <div class="about-text">
+            <p class="fade-in-text">
+              Welcome to my digital realm! I'm Bollam Ritvik, a passionate creative editor and digital storyteller who believes in the power of visual narratives to shape the future.
+            </p>
+            <p class="fade-in-text">
+              With expertise in video editing, motion graphics, and digital storytelling, I transform raw footage into compelling visual experiences that captivate audiences and convey powerful messages.
+            </p>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-date">2024</div>
+                <div class="timeline-content">
+                  <h4>Advanced Motion Graphics</h4>
+                  <p>Mastering After Effects & Cinema 4D</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-date">2023</div>
+                <div class="timeline-content">
+                  <h4>Professional Video Editor</h4>
+                  <p>Specialized in Premiere Pro & DaVinci Resolve</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-date">2022</div>
+                <div class="timeline-content">
+                  <h4>Digital Storytelling Journey</h4>
+                  <p>Started creating compelling visual narratives</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="video">Video Editing</button>
+          <button class="filter-btn" data-filter="ai">AI</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+          <div class="project-card" data-category="video">
+            <div class="project-image">
+              <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=400&h=300&fit=crop" alt="Cinematic Short Film">
+              <div class="project-overlay">
+                <button class="project-btn" onclick="openModal('project1')">View Details</button>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Cinematic Short Film</h3>
+              <p>A futuristic narrative exploring AI consciousness</p>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="web">
+            <div class="project-image">
+              <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&h=300&fit=crop" alt="Interactive Web Experience">
+              <div class="project-overlay">
+                <button class="project-btn" onclick="openModal('project2')">View Details</button>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Interactive Web Experience</h3>
+              <p>Immersive digital storytelling platform</p>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="ai">
+            <div class="project-image">
+              <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300&fit=crop" alt="AI-Generated Content">
+              <div class="project-overlay">
+                <button class="project-btn" onclick="openModal('project3')">View Details</button>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>AI-Generated Content</h3>
+              <p>Experimental AI-assisted video production</p>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="video">
+            <div class="project-image">
+              <img src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=300&fit=crop" alt="Motion Graphics Reel">
+              <div class="project-overlay">
+                <button class="project-btn" onclick="openModal('project4')">View Details</button>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Motion Graphics Reel</h3>
+              <p>Dynamic animations and visual effects showcase</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <h2 class="section-title">Editing Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <div class="skill-icon">🎬</div>
+            <h3>Adobe Premiere Pro</h3>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="95%"></div>
+            </div>
+            <span class="skill-percent">95%</span>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-icon">✨</div>
+            <h3>After Effects</h3>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="88%"></div>
+            </div>
+            <span class="skill-percent">88%</span>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-icon">🎨</div>
+            <h3>Color Grading</h3>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="92%"></div>
+            </div>
+            <span class="skill-percent">92%</span>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-icon">🏃‍♂️</div>
+            <h3>Motion Graphics</h3>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="85%"></div>
+            </div>
+            <span class="skill-percent">85%</span>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-icon">🖼️</div>
+            <h3>Photoshop</h3>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="90%"></div>
+            </div>
+            <span class="skill-percent">90%</span>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-icon">🔄</div>
+            <h3>Transitions</h3>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="94%"></div>
+            </div>
+            <span class="skill-percent">94%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <h2 class="section-title">Let's Connect</h2>
+        <div class="contact-content">
+          <div class="contact-form-container">
+            <form class="contact-form" id="contact-form">
+              <div class="form-group">
+                <input type="text" id="name" name="name" required>
+                <label for="name">Name</label>
+                <div class="input-glow"></div>
+              </div>
+              
+              <div class="form-group">
+                <input type="email" id="email" name="email" required>
+                <label for="email">Email</label>
+                <div class="input-glow"></div>
+              </div>
+              
+              <div class="form-group">
+                <textarea id="message" name="message" required></textarea>
+                <label for="message">Message</label>
+                <div class="input-glow"></div>
+              </div>
+              
+              <button type="submit" class="submit-btn">
+                <span>Send Message</span>
+                <div class="button-glow"></div>
+              </button>
+            </form>
+          </div>
+          
+          <div class="contact-info">
+            <div class="floating-element">
+              <div class="rotating-mail">📧</div>
+            </div>
+            
+            <div class="social-links">
+              <a href="#" class="social-link">
+                <span>LinkedIn</span>
+                <div class="social-glow"></div>
+              </a>
+              <a href="#" class="social-link">
+                <span>Instagram</span>
+                <div class="social-glow"></div>
+              </a>
+              <a href="#" class="social-link">
+                <span>YouTube</span>
+                <div class="social-glow"></div>
+              </a>
+              <a href="#" class="social-link">
+                <span>GitHub</span>
+                <div class="social-glow"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Modals -->
+    <div id="project1" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Cinematic Short Film</h2>
+        <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&h=400&fit=crop" alt="Project Image">
+        <p>A compelling narrative exploring the boundaries between human consciousness and artificial intelligence, featuring advanced color grading and motion graphics.</p>
+        <div class="modal-buttons">
+          <a href="#" class="modal-btn">View Live</a>
+          <a href="#" class="modal-btn">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="project2" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Interactive Web Experience</h2>
+        <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=600&h=400&fit=crop" alt="Project Image">
+        <p>An immersive digital storytelling platform that combines web development with multimedia content to create engaging user experiences.</p>
+        <div class="modal-buttons">
+          <a href="#" class="modal-btn">View Live</a>
+          <a href="#" class="modal-btn">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="project3" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>AI-Generated Content</h2>
+        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop" alt="Project Image">
+        <p>Experimental project combining AI-generated visuals with traditional video editing techniques to create unique visual experiences.</p>
+        <div class="modal-buttons">
+          <a href="#" class="modal-btn">View Live</a>
+          <a href="#" class="modal-btn">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="project4" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Motion Graphics Reel</h2>
+        <img src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop" alt="Project Image">
+        <p>A comprehensive showcase of motion graphics work featuring dynamic animations, visual effects, and cutting-edge design techniques.</p>
+        <div class="modal-buttons">
+          <a href="#" class="modal-btn">View Live</a>
+          <a href="#" class="modal-btn">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
